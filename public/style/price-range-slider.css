@@ -1,0 +1,27 @@
+#date_range_slider {
+    margin-top: 100px;
+  }
+  
+  .ui-rangeSlider .ui-rangeSlider-container {
+    background: #eee;
+    height: 20px;
+  }
+  .ui-rangeSlider .ui-rangeSlider-label {
+    bottom: 35px;
+    color: #fff;
+    background: #0578c1;
+    padding: 11px;
+    font: bold 12px/1 arial;
+  }
+  .ui-rangeSlider .ui-rangeSlider-handle {
+    background: #04598f;
+  }
+  .ui-rangeSlider .ui-rangeSlider-bar {
+    background: #0578c1;
+    height: 20px;
+  }
+  .ui-rangeSlider .ui-rangeSlider-innerBar {
+    background: transparent;
+    height: 20px;
+  }
+  

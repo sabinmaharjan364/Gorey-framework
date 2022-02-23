@@ -1,0 +1,3 @@
+<a href="<?php echo SITEROOT.$controllers.'/edit/'.$row['id'] ;?>" class="btn btn-dark btn-block"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+<a href="<?php echo SITEROOT.$controllers.'/delete/'.$row['id'] ;?>" class="btn btn-dark btn-block"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+<a href="<?php echo SITEROOT.$controllers.'/show/'.$row['id'] ;?>" class="btn btn-dark btn-block"><i class="fa fa-eye" aria-hidden="true"></i></a>

@@ -1,0 +1,173 @@
+Project: Black Rose Bookstore (And Publicaion House)
+Student Number: u1125009
+Student Name: Sabin Maharjan
+
+
+Functionality planned for all users (public)
+1.All users can view all the books available in bookstore.
+2.All users can search for the books.
+3.All users can add, update and delete the books of shopping cart and it is stored in session. 
+4.All users can login and register in the system.
+5.All users can rate the different books and author.
+
+Functionality planned for registered users only
+1.Registered users can add, edit, delete and view the list of books from database in dashboard of website.
+2.Registerd users have to pass validation test before adding and editing data.
+3.Registered users can edit their personal detail, credit card details.
+4.Registered users can add, update and delete the books of shopping cart and it is stored in session. 
+5.Registered users can add and remove the books to favourite or in watching list.
+6.Registered users can request for the book to the bookstore that bookstore don't have this time.
+7.Registered users can get special discount price sometimes. 
+
+Functionality planned for simple search
+1.User can search the books by typing author name or book title, book category etc in seach box.
+2.On search the data will be listed in list view or grid view in the website.
+3.If the books are not available there will be option to request to bring that book in bookstore.
+
+Functionality planned for complex search
+1.In complex search we can search using different functionalities like, searching from book title, genre, author, bookstore, price range, condition, year published etc using complex query from many database tables.
+2.The searched result are shown in list view or grid view.
+
+
+Assignment 2 updates:
+    1. ReadMe File created:
+        *Project Detail description
+            -> In this file, I have added detail description about this project and its folder structure as folder structure has been changed.
+            -> This can be found in this link: http://localhost/bookstore/readMe.txt and Other report of this page can be seen in http://localhost/bookstore/pages/report.
+           
+
+    2. Following file are created:
+        * install.php
+            -> First step is to hit this url before running this project. http://localhost/bookstore/migration/install.php.
+            -> The project can be run in http://112.141.75.63/bookstore/migration/install.php if server is on.
+            -> It will redirect to index page after migration of database is successfull. http://localhost/bookstore/pages/home&msg=Database%20is%20successfully%20imported.
+            -> Running this file at beginning will create and insert the data into newly created or existing database. 
+            -> This file contains SQLITE3 script for creation of database and insert the data in database.
+            
+        * libcommon.php
+            -> This file contains the function which helps to connect to sqlite3 database. It also contains all the common script used for communication with database.
+            -> In this file DRY (Donot Repeat yourself) features are used.
+
+    
+    3. Login Features are added
+        * added passwrod encryption for project security.
+        * After successful login, We are navigated to Dashboard of our project where we have more controls of this application.
+        * Session are used for tracking valid users using this application. User can't access application's dashboard page without login in this system.
+        * email: admin@gmail.com and password:foo123 can be used for authentication.
+
+    4. Consistency:
+        * Project maintains proper folder structuring. The most repeated file are placed in include folder which can be included in the page we require.
+
+    4. Dynamic operation
+        *index.php and other files 
+            -> Data has been retrieved from database and shown in webpage in index page and other pages as needed. Hence, page are dynamic.
+        
+        * CRUD operation
+            -> Create, Read, Update and Delete has been successfully done for tbl_genre table.
+            
+
+Assignment 3 updates:
+    1.search features added
+        ->simple search
+            can search from books table
+
+        ->advance search
+            can search from many table
+
+    2.Cart function
+        ->user can add to cart, remove from cart
+
+    3.authentication
+        ->uses md5 encrytion while registering the user.
+        ->Session are used to track the users.
+        ->Role Based 
+            .Super User
+                Email:admin@gmail.com
+                Pass: foo123
+                : can do CRUD Operation for most of the table like:
+                    =Book table,
+                    =Author table,
+                    =publishers table,
+                    =Genre table,
+                    =store table
+                : can view all users detail
+
+            .Admin User
+                Email:guest@gmail.com
+                Pass: foo123
+                :Normal registered user will get the guest role while signup
+                :can view our own profile
+                :view the website, books and author detail
+                :can add to the cart
+
+            .Guest User
+                :Non registered user can view website.
+                :can add to the cart
+                :view the website, books and author detail
+
+    4.Different Roles with different Dashboard and function
+        
+    5.CRUD operation
+        ->users can do Create, Read, Delete, Update the table data from dashboard form.
+        ->added a detail view page for books.
+
+    6.Asynchronous update (ajax) is used.
+        ->used ajax for adding to cart.
+        ->used to check the existing users in database.
+
+    7.htaccess
+        ->used .htaccess file for many purpose in this project.
+        ->navigate to 404 page if file is not found.
+
+    8.Exception page has been created
+        ->404, 500 and 503 page is created for respective error
+
+    9.Form validation
+        ->client Side
+            -Register page (http://localhost/bookstore/pages/register)
+                .In register page, the user can't register the already registered email, User should register with new email address.
+                .The user can use the name with maximum 50 character.
+                .The password should contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters.
+            -Form
+                .I have used the validation provided by form too
+                    -required
+                    -maxlength
+                    -pattern
+
+        ->server Side
+            While registration of user, it check whether the user trying to register email is already present in database and if email exist then button is disabled so that
+            user can't submit the form unless user put the valid non exist user. This project has validation in many pages. 
+
+    
+    10.Relationship
+        ->many to many relationship
+            added many to many relationship in order table and review table.
+
+        ->one to many relationship
+            added in genre, publishers, author with books
+    11.security
+        ->I have tested to sql injection in this project and added security for this project.
+            ->added 
+                SQLite3::escapeString, filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING); 
+            
+
+    11.Documentation
+        ->source of image are clearly documented in Report page of website.
+        ->comments are done. Globally, I have talked about comment in readMe file.
+        ->codes are clearly and simple, readable and easy to understand.
+        ->There are more clear documentation done in http://localhost/bookstore/readMe.txt
+
+* I am very grateful to Dr Matthew Mengel; I have got oppurtunity to learn many new things while doing project and this was one of the plan list of my project list. I will further improve this project and use it for real world project.
+        
+
+
+
+
+
+
+
+        
+
+    
+
+

@@ -1,0 +1,341 @@
+/** --------------------------- Custom design code --------------------------------- **/
+
+/* design in home page for making first letter only with 4.5 em */
+#slider p::first-letter{
+    font-size: 4.5em;
+        float: left;
+        
+}
+
+/* style for paragraph element p inside slider selector */
+#slider p{
+font-size: 1.5em;
+    
+}
+
+
+/* design small line inside any one section*/
+.line{
+    height: 2px;
+    width: 50px;
+    background-color: #888F96;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+
+/* remove the bullets and numbering and make the font bold*/
+.col-id-3 li{
+list-style-type: none;
+font-weight: bold ;
+padding-left: 15px;
+}
+
+/* remove the bullets and numbering*/
+
+li{
+  list-style-type: none;
+  
+  }
+.col-id-2 li a,.col-id-8 li a{
+  color:black;
+  
+  }
+/* remove the bullets and numbering*/
+.col-id-6 li{
+  list-style-type: none;
+  
+}
+
+
+.slide-box > .col-id-3 {
+/* strickly use this style if other too found with this same selector*/
+padding: 10px !important;
+}
+
+/* style  image inside of slide-box selector*/
+.slide-box > img{
+border-radius: 50%;
+height:300px;
+}
+
+.content img{
+    border-radius: 50%;
+    height:300px;
+}
+
+/* give padding to content section*/
+.col-id-3 .content{
+    /*background-color: #888F96;*/
+padding: 15px;
+
+}
+
+
+/*align paragraph which is inside verticle element selector to center*/
+.vertical-line p{
+text-align: center; 
+}
+
+/* give design to slider-background selector of all pages having this selector*/
+#slider-background{
+min-height: 150px;
+background-color: #232F3E;
+padding-top: 15px;
+padding-left: 15px;
+opacity:0.9;
+
+
+}
+
+/*  style for font awsome icon*/
+.content i{
+    font-size:300px;
+    width:100%;
+    color:#6E7780;
+}
+/* fixing the design  */
+#about:target,#trending:target,#author:target,#report:target{
+    padding-top:100px;
+    
+}
+.full{
+    background-color: #888F96;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.error {
+    font-size: 8em;
+
+  }
+  
+  .eye,.circle {
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    position: relative;
+    width: 100px;
+    
+  }
+  .eye::after {
+    background: #000;
+    border-radius: 50%;
+    bottom: 56.1px;
+    content: ' ';
+    height: 33px;
+    position: absolute;
+    right: 33px;
+    width: 33px;
+  }
+  
+.center{
+    text-align:center;
+    float:center;
+}
+footer h2{
+    text-align: center;
+}
+.logo img{
+    height:85px;
+    padding-top: 20px;
+}
+form.example{
+    padding:20px;
+}
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #1C2633;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #232F3E;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .col-id-1 i{
+    font-size: 34px;
+    padding-top: 20px;
+}
+.cart-table td{
+
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-top: 5px solid #888F96;  
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.notification {
+  padding: 15px 26px;
+  text-decoration: none;
+  position: relative;
+  border-radius: 2px;
+}
+
+
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+
+/* right float*/
+.pull-right{
+  text-align:right;
+}
+
+/* toogle switch css code*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+
+
+.slide  {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slide :before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+input:checked + .slide  {
+  background-color: rgb(51, 211, 51);;
+}
+
+input:focus + .slide  {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slide :before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded slide s */
+.slide .round {
+  border-radius: 34px;
+}
+
+.slide .round:before {
+  border-radius: 50%;
+}
+.col-id-2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.col-id-2 li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.col-id-2 li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.col-id-2 li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+       
+footer a, header a{
+color:#FFFFEC;
+}
+.review{
+  font-size:70px;
+  float:left;
+}
+
+.review-total{
+  float:left;
+}
+.range-slider{
+  border:0; color:#1C2633; font-weight:bold;
+}
+.ui-widget-header{
+  border: 1px solid #1C2633 !important;
+  background: #1C2633 url(images/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x !important;
+  color: #ffffff;
+  font-weight: bold;
+}
